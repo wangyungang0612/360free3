@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/top_contacts_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/remove_same_contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:text="去重"
+            android:textColor="#FFFFFF" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/pb_search_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar_edit_pressed"
+        android:drawableLeft="@drawable/pb_search_contacts"
+        android:hint="搜索联系人"
+        android:textColor="#000000"
+        android:textSize="15dip" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white" >
+
+            <ListView
+                android:id="@+id/pb_listvew"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:divider="#336598"
+                android:dividerHeight="2dp" />
+
+            <TextView
+                android:id="@+id/pb_letter_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/toast_letter_bg"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="50sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/nocontacts_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="暂无匹配联系人"
+                android:textColor="#000000"
+                android:textSize="28dip"
+                android:visibility="gone" />
+
+            <com.example.isweixin.ContactPerson.ABCDEFG
+                android:id="@+id/alphabetscrollbar"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/contacts_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/add_contacts1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/xinjian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="jp_onClick"
+                    android:text="新建联系人"
+                    android:textColor="#abc222" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/fenzu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/fenzu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="jp_onClick"
+                    android:text="分组"
+                    android:textColor="#abc222" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/heimingdan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/heimingdan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="jp_onClick"
+                    android:text="黑白名单"
+                    android:textColor="#abc222" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/gengduo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/gengduo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="jp_onClick"
+                    android:text="更多"
+                    android:textColor="#abc222" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/contacts_layout"
+            android:orientation="vertical" >
+
+            <include
+                android:layout_height="190dp"
+                layout="@layout/more2" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

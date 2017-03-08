@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboardLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="4" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/edit_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/telephoneNumber"
+            android:textColorHighlight="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:onClick="jp_onClick"
+            android:src="@drawable/huishan" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageButton
+            android:id="@+id/number1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_1" />
+
+        <ImageButton
+            android:id="@+id/number2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.00"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_2" />
+
+        <ImageButton
+            android:id="@+id/number3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageButton
+            android:id="@+id/number4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_4" />
+
+        <ImageButton
+            android:id="@+id/number5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_5" />
+
+        <ImageButton
+            android:id="@+id/number6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageButton
+            android:id="@+id/number7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_7" />
+
+        <ImageButton
+            android:id="@+id/number8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_8" />
+
+        <ImageButton
+            android:id="@+id/number9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <ImageButton
+            android:id="@+id/number_xing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_xing" />
+
+        <ImageButton
+            android:id="@+id/number0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_0" />
+
+        <ImageButton
+            android:id="@+id/number_jing"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:src="@drawable/number_jing" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/dialButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:text="拨打" />
+
+        <Button
+            android:id="@+id/qingchu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="jp_onClick"
+            android:text="清除" />
+    </LinearLayout>
+
+</LinearLayout>

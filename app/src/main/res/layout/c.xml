@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top_sms_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="vertical" >
+    </LinearLayout>
+ <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/sms_list"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:clipToPadding="false"
+            android:divider="#FFFFFF"
+            android:dividerHeight="2dp"
+            android:fadingEdge="none" />
+
+        <TextView
+            android:id="@+id/nosms_notice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="暂无信息"
+            android:textColor="#000000"
+            android:textSize="28dip"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/duanxin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/xinjianxiaoxi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xinjianxiaoxi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="jp_onClick"
+                android:text="新建消息"
+                android:textColor="#abc222" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/tongzhixiaoxi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tongzhixiaoxi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="jp_onClick"
+                android:text="通知消息"
+                android:textColor="#abc222" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/lanjiexiaoxi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lanjiexiaoxi" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="jp_onClick"
+                android:text="拦截消息"
+                android:textColor="#abc222" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/gengduo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/gengduo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="jp_onClick"
+                android:text="更多"
+                android:textColor="#abc222" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/duanxin"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_height="190dp"
+            layout="@layout/more3" />
+    </LinearLayout>
+ </RelativeLayout>
+</LinearLayout>
